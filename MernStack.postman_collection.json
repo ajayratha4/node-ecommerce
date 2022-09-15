@@ -1,0 +1,429 @@
+{
+	"info": {
+		"_postman_id": "d09a1eb3-0884-4f79-a8b9-dc0a557d4e5d",
+		"name": "MernStack",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23379999"
+	},
+	"item": [
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test@gmail.com\",\r\n    \"name\": \"test\",\r\n    \"password\": \"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}/user/create",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"test@gmail.com\",\r\n    \"name\": \"test\",\r\n    \"password\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/user/create",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"user",
+								"create"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "241"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f1-rPsPhWhkhm0j/M4exyaznc/GcXI\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 15 Sep 2022 19:49:27 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"data\": {\n        \"user\": {\n            \"name\": \"test\",\n            \"email\": \"test@gmail.com\",\n            \"password\": \"test\",\n            \"_id\": \"632381c7b217b7153cea8258\",\n            \"__v\": 0\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiJ9.IjYzMjM4MWM3YjIxN2I3MTUzY2VhODI1OCI.qYm3Pg5GZflTQSE2qEv84nklJKOcwGTotvrghAFmn1U\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "login",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test@gmail.com\",\r\n    \"password\": \"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}/user/login",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "login",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"test@gmail.com\",\r\n    \"password\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/user/login",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "284"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"11c-FLEcwtDt83Ay+beB3q7sCbtEHOs\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 15 Sep 2022 19:59:07 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"user\": {\n            \"_id\": \"632383fa3de23686d7f2ac73\",\n            \"name\": \"test\",\n            \"email\": \"test@gmail.com\",\n            \"password\": \"$2b$10$i/AN5ZDNmtZIcuRt4Gn5SuvODVqmhtRaRhGTBcF2dB8Axejwwd66a\",\n            \"__v\": 0\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiJ9.IjYzMjM4M2ZhM2RlMjM2ODZkN2YyYWM3MyI.qq1QZZkv6gME3xzAM5PXkBZ3uCVVdWr2U8EC57wh-E0\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "getProducts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test55dadawdawd@gmail.com\",\r\n    \"name\": \"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}/product/getProducts",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"product",
+						"getProducts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/product/getProduct?id=63224254270ba7fb83eb5137",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"product",
+						"getProduct"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "63224254270ba7fb83eb5137"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"test\",\r\n    \"price\": {\r\n        \"actualPrice\": 123,\r\n        \"discountPrice\": 100\r\n    },\r\n    \"image\": [\r\n        \"https://www.abtasty.com/wp-content/uploads/ecommerce-product-description.jpg\",\r\n        \"https://www.abtasty.com/wp-content/uploads/ecommerce-product-description.jpg\",\r\n        \"https://www.abtasty.com/wp-content/uploads/ecommerce-product-description.jpg\"\r\n    ],\r\n    \"description\": \"In their product descriptions, Innocent emphasizes the few elements that make their smoothies\",\r\n    \"quantity\": 30,\r\n    \"review\": 8,\r\n    \"category\": \"dress\",\r\n    \"tag\": [\r\n        \"dress\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}/product/create",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"product",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"order1\",\r\n    \"status\": \"c\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}/order/create",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"order",
+						"create"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create order",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"order1\",\r\n    \"status\": \"c\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/order/create",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"order",
+								"create"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "147"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"93-BR9L/SjvFqlZAdNxlxjuMfidnkY\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 15 Sep 2022 20:00:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"order1\",\n    \"createdBy\": \"632381c7b217b7153cea8258\",\n    \"status\": \"c\",\n    \"created\": \"2022-09-15T19:58:47.822Z\",\n    \"_id\": \"632384593de23686d7f2ac7b\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "get order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/order/get",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"order",
+						"get"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
