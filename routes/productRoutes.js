@@ -8,8 +8,8 @@ const {
 express = require("express");
 const router = express.Router();
 
-router.get("/getProducts", jwtVerify, allProducts);
-router.get("/getProduct", jwtVerify, getProductById);
+router.get("/getProducts", allProducts);
+router.get("/getProduct", getProductById);
 router.post("/create", jwtVerify, createProduct);
 
 module.exports = router;
