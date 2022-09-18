@@ -1,4 +1,5 @@
 const jwt = require("jsonwebtoken");
+const { consoleLog } = require("./log");
 const response = require("./response");
 
 const jwtGen = (data) => {
@@ -7,13 +8,11 @@ const jwtGen = (data) => {
 
 const jwtVerify = async (req, res, next) => {
   if (req.method === "GET") {
-    console.log(
-      "\x1b[36m%s\x1b[0m",
+    consoleLog(
       `${req.url} =================> ${JSON.stringify(req?.query, null, 4)}`
     );
   } else {
-    console.log(
-      "\x1b[36m%s\x1b[0m",
+    consoleLog(
       `${req.url} =================> ${JSON.stringify(req?.body, null, 4)}`
     );
   }

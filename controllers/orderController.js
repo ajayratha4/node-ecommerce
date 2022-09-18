@@ -10,7 +10,7 @@ const createOrder = async (req, res) => {
 };
 
 const getOrder = async (req, res) => {
-  const data = await getOrderService(req?.query);
+  const data = await getOrderService(req?.query, req.userId);
   res.status(200);
   res.send(data);
 };

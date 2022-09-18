@@ -5,8 +5,15 @@ require("dotenv").config();
 const userRoutes = require("./routes/userRoutes");
 const productRoutes = require("./routes/productRoutes");
 const orderRouter = require("./routes/orderRouter");
+const cors = require("cors");
 
 const app = express();
+
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 
 require("./db/config");
 

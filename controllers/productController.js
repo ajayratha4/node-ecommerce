@@ -11,8 +11,6 @@ const allProducts = async (req, res) => {
 };
 
 const getProductById = async (req, res) => {
-  console.log(req.query);
-
   const data = await getProductByIdService(req.query?.id);
   res.status(data.status || 200);
   res.send(data);
