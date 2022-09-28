@@ -32,8 +32,11 @@ const getAllProductsService = async (query) => {
     //     break;
     // }
   });
-  
-  return response({ status: 200, data: await Products.find(filter, showFields) });;
+
+  return response({
+    status: 200,
+    data: await Products.find(filter, showFields),
+  });
 };
 
 const getProductByIdService = async (id) => {
