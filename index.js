@@ -23,10 +23,10 @@ app.use("/user", userRoutes);
 app.use("/product", productRoutes);
 app.use("/order", orderRouter);
 
-app.use("*", (req, res, next) => {
-  res.send("<h1>wellcome to app</h1>");
+app.use("/", (req, res, next) => {
+  res.send("<h1>welcome to app</h1>");
 });
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 8080, () => {
   console.log(`Server is running on port ${process.env.PORT}`);
 });
